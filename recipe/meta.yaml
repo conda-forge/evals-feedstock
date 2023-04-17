@@ -1,5 +1,5 @@
 {% set name = "evals" %}
-{% set version = "0.1.1" %}
+{% set version = "1.0.2.post1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/evals-{{ version }}.tar.gz
-  sha256: 15369657c36fdd8b0b8085bbbf57a2c05502c3b8dbda03df8092876eb98ef05b
+  sha256: af95733163093d5a3bb5dfab557447638eac06532e83c31dd177418c91835c6d
 
 build:
   entry_points:
@@ -44,6 +44,7 @@ requirements:
     - pyyaml
     - sacrebleu
     - matplotlib-base
+    - setuptools-scm
 
 test:
   imports:
