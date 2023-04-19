@@ -1,5 +1,5 @@
 {% set name = "evals" %}
-{% set version = "1.0.2.post1" %}
+{% set version = "1.0.3.post1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/evals-{{ version }}.tar.gz
-  sha256: af95733163093d5a3bb5dfab557447638eac06532e83c31dd177418c91835c6d
+  sha256: d24f525e0051d48662f38f4f1216d61ea0079df5a5ec0ee5582c28b7eeed4661
 
 build:
   entry_points:
@@ -24,7 +24,7 @@ requirements:
   run:
     - python >=3.8
     - mypy
-    - openai
+    - openai >=0.27.2
     - tiktoken
     - blobfile
     - backoff
