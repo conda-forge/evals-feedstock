@@ -1,5 +1,5 @@
 {% set name = "evals" %}
-{% set version = "1.0.3.post1" %}
+{% set version = "2.0.0.post1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/evals-{{ version }}.tar.gz
-  sha256: d24f525e0051d48662f38f4f1216d61ea0079df5a5ec0ee5582c28b7eeed4661
+  sha256: 243f17b24dd9ad01baca2b3a085124142a7887f6711944000b44c4a7a9833496
 
 build:
   entry_points:
@@ -22,9 +22,18 @@ requirements:
     - python >=3.9
     - pip
   run:
+    - datasets
+    - jiwer
+    - langchain
+    - numexpr
+    - pytest
+    - seaborn
+    - spacy-universal-sentence-encoder
+    - statsmodels
+    - types-pyyaml
     - python >=3.9
     - mypy
-    - openai >=0.27.2
+    - openai >=1.0.0
     - tiktoken
     - blobfile
     - backoff
