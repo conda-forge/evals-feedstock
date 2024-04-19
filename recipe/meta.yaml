@@ -1,5 +1,5 @@
 {% set name = "evals" %}
-{% set version = "1.0.3.post1" %}
+{% set version = "3.0.0.post1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/evals-{{ version }}.tar.gz
-  sha256: d24f525e0051d48662f38f4f1216d61ea0079df5a5ec0ee5582c28b7eeed4661
+  sha256: b8b214d22f77e3cd963ae395d1983ad7355c331e3af7ab52348740439b6406a5
 
 build:
   entry_points:
@@ -22,9 +22,33 @@ requirements:
     - python >=3.9
     - pip
   run:
+    - aiolimiter
+    - anthropic
+    - beartype >=0.12.0
+    - chess
+    - dacite
+    - datasets
+    - docker-py
+    - evaluate
+    - flask
+    - google-generativeai
+    - gymnasium
+    - jiwer
+    - langchain
+    - networkx
+    - numexpr
+    - playwright
+    - pytest
+    - pytorch
+    - seaborn
+    - spacy-universal-sentence-encoder
+    - statsmodels
+    - types-pyyaml
+    - types-tqdm
+    - zstandard
     - python >=3.9
     - mypy
-    - openai >=0.27.2
+    - openai >=1.0.0
     - tiktoken
     - blobfile
     - backoff
