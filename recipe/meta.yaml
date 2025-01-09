@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/evals-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/evals-{{ version }}.tar.gz
   sha256: d24f525e0051d48662f38f4f1216d61ea0079df5a5ec0ee5582c28b7eeed4661
 
 build:
@@ -15,14 +15,14 @@ build:
     - oaievalset = evals.cli.oaievalset:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - mypy
     - openai >=0.27.2
     - tiktoken
@@ -55,6 +55,7 @@ test:
     - oaievalset --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/openai/evals
