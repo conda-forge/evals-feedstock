@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/openai/evals/archive/refs/tags/{{ version }}.tar.gz
-  sha256: d24f525e0051d48662f38f4f1216d61ea0079df5a5ec0ee5582c28b7eeed4661
+  sha256: cc52bbe5b002c0ac7d70f0b1aabf35bdce3bcc2d25a6935ed42ce8918592302c
 
 build:
   entry_points:
