@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/evals-{{ version }}.tar.gz
+  url: https://github.com/openai/evals/archive/refs/tags/{{ version }}.tar.gz
   sha256: d24f525e0051d48662f38f4f1216d61ea0079df5a5ec0ee5582c28b7eeed4661
 
 build:
